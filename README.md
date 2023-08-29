@@ -1,32 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Run the app with docker !  
 
-Things you may want to cover:
 
-* Ruby version
+***NB: Make sure you have the wallet manager service running and listening on port 8081 ***
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-### mongodb 
-
-#### docker pull mongo
-
-```docker run -d -p 27018:27017 --name cryptocowrie-mongo mongo:latest```
-
-```host : localhost:27018```
+```docker build . -t cc-user-backend```
+```docker run --network=host -d cc-user-backend```
